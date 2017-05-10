@@ -28,7 +28,7 @@ The API http://api.randomuser.me is a fake user API that provides user object wi
 ### Value Services
 
 1. Request angular to use a value that can be used in multiple places
-2.
+2. Defining is like:
 `app.value("appNameSvc","value of appName")`
 
 3. Inject the service to the controller.
@@ -51,7 +51,7 @@ The API http://api.randomuser.me is a fake user API that provides user object wi
 
 ### Factory Service
 1. A prepared object is the value of the factory services
-2. 
+2. Defining is like :
 `app.factory("AppFactorySvc",function(){return ...});
 `
 
@@ -133,23 +133,23 @@ new AppConfig();
 1. The built in Angular objects and functions have names begining **$** such as *$scope*,*$http*,*$rootScope* etc
 2. To use *$http* inject it to the controller as done for other services.
 3. USe JSon server to act as fake REST API which use json as backing
-  * create a folder data
-  * Create db.json file
-  * Structure is json file .It should have unique ids
-  * run json-server db.json
-  * Go to the url we get.
+   * create a folder data
+   * Create db.json file
+   * Structure is json file .It should have unique ids
+   * run json-server db.json
+   * Go to the url we get.
 
 ### $http
 1. To use get
-  $http.get('http://my-api.com/api')
+  `$http.get('http://my-api.com/api')`
 
 
 2. To use post
-  $http.post('http://my-api.com/api',{'key':'value'})
+  `$http.post('http://my-api.com/api',{'key':'value'})`
 
 
 3. To use put
-  $http.put("http://localhost:3000/contacts/"+userData.id, userData)
+  `$http.put("http://localhost:3000/contacts/"+userData.id, userData)`
 
 
 4. What we get as return of these get and post. => We dont get the actual value. Because of the asynchronous nature of javascript.
@@ -159,18 +159,17 @@ new AppConfig();
 2. Every operation needs to be non-blocking.
 3. Traditionally handled through *callbacks* .
 4. In Jquery :
-``` $(document).ready(function(){});
-
-```
-  We call the ready function  of the jQuery with a function as argument on document object. ie When the document is ready call the function mentioned.
+` $(document).ready(function(){});`
+  
+5.  We call the ready function  of the jQuery with a function as argument on document object. ie When the document is ready call the function mentioned.
 ``` $("a").click(function(event){
   alert("You clicked on a link");
   });
 
 ```
- The function is executed asynchronously.
- 5. The problem with call backs is :  It has a lot of callbacks in heavy application
- 6. *$http* uses **Promises**
+6. The function is executed asynchronously.
+7. The problem with call backs is :  It has a lot of callbacks in heavy application
+8. *$http* uses **Promises**
 
 ### Promises
 
