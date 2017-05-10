@@ -28,32 +28,32 @@ The API http://api.randomuser.me is a fake user API that provides user object wi
 ### Value Services
 
 1. Request angular to use a value that can be used in multiple places
-2. 
-``` app.value("appNameSvc","value of appName")
+2.
+`app.value("appNameSvc","value of appName")`
 
-```
 3. Inject the service to the controller.
-``` function Samplecontroller(appNameSvc){}
 
-```
+`function Samplecontroller(appNameSvc){}`
 
 ### Constant Services
 1. To define a constant value in an application.
-2.
-  app.constant("appDateSvc","value of appName")
+2. 
 
+`app.constant("appDateSvc","value of appName")
+`
 
 3. Inject the service to the controller.
- function Samplecontroller(appDateSvc){}
 
+`function Samplecontroller(appDateSvc){}
+`
 
 4. Difference between *value and constant services* are in *app configuration* where you can use constant and not value
 
 ### Factory Service
 1. A prepared object is the value of the factory services
 2. 
- app.factory("AppFactorySvc",function(){return ...});
-
+`app.factory("AppFactorySvc",function(){return ...});
+`
 
 3. With a *factory* it is the *angular* that gets to call and execute the function. Which is why it can dependancy injectother services that you need.
 ``` app.value("AppNameSvc","My new contact App");
@@ -90,16 +90,18 @@ function prepareConfig(AppNameSvc){
 //Way to call a function in constructor mode
 
 new AppConfig();
+
 ```
 
 4. Way to call a function in constructor mode
 
-``` new AppConfig();
-```
-5. The way to call **Service** service is  
-``` app.service("AppDataServiceSvc",AppConfig);  // new AppConfig()
+`new AppConfig();`
 
-```
+5. The way to call **Service** service is  
+
+` app.service("AppDataServiceSvc",AppConfig);  // new AppConfig()`
+
+
 6. This will call the *AppConfig* function in constructor mode rather than in **Factory** it is just the execution of the function.
 
 
