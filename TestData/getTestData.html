@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <title>Page Title</title>
+</head>
+<script>
+  $(document).ready(function(){
+    $.ajax({
+      url: 'https://randomuser.me/api/',
+      dataType: 'json',
+      success: function(data) {
+        console.log(data);
+      }
+    });
+  });
+</script>
+<body>
+
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+
+</body>
+</html>
