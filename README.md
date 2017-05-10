@@ -37,7 +37,7 @@ The API http://api.randomuser.me is a fake user API that provides user object wi
 
 ### Constant Services
 1. To define a constant value in an application.
-2. 
+2. Define format :
 
 `app.constant("appDateSvc","value of appName")
 `
