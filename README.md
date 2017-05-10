@@ -1,9 +1,9 @@
-#Angular Services
+# Angular Services
 
 1. Services are reusable elements in angular codes.
 2. can be values,objects,constants and funcitons
 
-###Setting up
+### Setting up
 1. **Node.js**
 2. **Http-server** : a node js application that starts a simple web server and host file from a directory .The files will then be accessible over the http:localhost...
 3. **json server** : a nodejs application that lets you create a simple fake *REST API* endpint that serves data from  a json file
@@ -31,8 +31,8 @@ The API http://api.randomuser.me is a fake user API that provides user object wi
 2. ``` app.value("appNameSvc","value of appName")
 ]
 ```
-3. Inject the service to the controller. ```
-  function Samplecontroller(appNameSvc){}
+3. Inject the service to the controller.
+``` function Samplecontroller(appNameSvc){}
 
 ```
 
@@ -41,8 +41,8 @@ The API http://api.randomuser.me is a fake user API that provides user object wi
 2. ``` app.constant("appDateSvc","value of appName")
 
 ```
-3. Inject the service to the controller. ```
-  function Samplecontroller(appDateSvc){}
+3. Inject the service to the controller.
+``` function Samplecontroller(appDateSvc){}
 
 ```
 4. Difference between *value and constant services* are in *app configuration* where you can use constant and not value
@@ -136,17 +136,17 @@ new AppConfig();
 
 ### $http
 1. To use get
-```$http.get('http://my-api.com/api')
+  $http.get('http://my-api.com/api')
 
-```
+
 2. To use post
-``` $http.post('http://my-api.com/api',{'key':'value'})
+  $http.post('http://my-api.com/api',{'key':'value'})
 
-```
+
 3. To use put
-``` $http.put("http://localhost:3000/contacts/"+userData.id, userData)
+  $http.put("http://localhost:3000/contacts/"+userData.id, userData)
 
-```
+
 4. What we get as return of these get and post. => We dont get the actual value. Because of the asynchronous nature of javascript.
 
 ### Asynchronous javascript
